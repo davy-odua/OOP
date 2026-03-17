@@ -1,30 +1,50 @@
 #polymorphism = Means to have many forms
 #              Poly = Means many
 #              Morphe = means form
+from super import circle
+
 
 #WAYS IN WHICH WE CAN ACHIEVE POLYMORPHISM
 #1. Inheritance = A child class inheriting the attributes of a parent class
 #2. Duck typing
 
-from abc import ABC, abstractmethod  # abstract method = A method which can only be used by children classes.
+from  abc import ABC, abstractmethod
+import math
 
 class Shapes:
+
     @abstractmethod
-    def __init__(self):
-
     def area(self):
-
-
-
+        pass
 
 class Circle(Shapes):
-    pass
+    def __init__(self, radius):
+        self.radius = radius
 
-class Triangle(Shapes):
-    pass
+    def area(self):
+        return 3.14 * self.radius ** 2
 
 class Square(Shapes):
-    pass
+    def __init__(self, side):
+        self.side = side
+
+    def area(self):
+        return self.side ** 2
+
+class Triangle(Shapes):
+    def __init__(self, base, height):
+        self.base = base
+        self.height = height
+
+    def area(self):
+        return 0.5 * self.base * self.height
+
+shapes = [Circle(7), Square(5), Triangle(3, 2)]
+
+for shape in shapes:
+    print(f"{shape.area} cm^2")
+
+
 
 
 

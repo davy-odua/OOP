@@ -50,11 +50,11 @@ square = Square("orange", False, 20)
 
 
 
-circle.describe()
-print("")
-triangle.describe()
-print("")
-square.describe()
+# circle.describe()
+# print("")
+# triangle.describe()
+# print("")
+# square.describe()
 
 
 
