@@ -41,6 +41,9 @@ class Triangle(Shapes):
 
 shapes = [Circle(7), Square(5), Triangle(3, 2)]
 
+for shape in shapes:
+    print(f"The area is {shape.area()} cm^2")
+
 
 
 
