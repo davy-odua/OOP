@@ -3,7 +3,6 @@
 #              Morphe = means form
 from super import circle
 
-
 #WAYS IN WHICH WE CAN ACHIEVE POLYMORPHISM
 #1. Inheritance = A child class inheriting the attributes of a parent class
 #2. Duck typing
@@ -12,7 +11,6 @@ from  abc import ABC, abstractmethod
 import math
 
 class Shapes:
-
     @abstractmethod
     def area(self):
         pass
@@ -45,7 +43,6 @@ class Pizza(Circle):
         self.topping = topping
 
 shapes = [Circle(7), Square(5), Triangle(3, 2), Pizza("Pepperoni",7)]
-
 
 for shape in shapes:
     print(f"The area is {shape.area()} cm^2")
